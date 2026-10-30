@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal CV of Ahmed Ali, Computer Science student">
+    <meta name="author" content="Ahmed Ali">
+    <title>Abdalrohman mohmad Altos - CV</title>
+    <style>
+        /* ==========================================================
+           CV styling - CSS only (the HTML below is unchanged)
+           ========================================================== */
+        :root {
+            --navy: #0f2a43;
+            --teal: #0e7c7b;
+            --teal-dark: #0a5e5d;
+            --amber: #f4b942;
+            --bg: #eef3f6;
+            --card: #ffffff;
+            --text: #24323f;
+            --muted: #6b7a88;
+            --line: #d9e2e8;
+            --soft: #eaf4f4;
+            --shadow: 0 6px 24px rgba(15, 42, 67, .08);
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0d1822;
+                --card: #15242f;
+                --text: #dce6ee;
+                --muted: #93a4b3;
+                --line: #263a49;
+                --soft: #1a313b;
+                --shadow: 0 6px 24px rgba(0, 0, 0, .35);
+                --teal: #2fb5b1;
+                --teal-dark: #1f8f8c;
+            }
+        }
+
+        * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            font-size: 1.02rem;
+            line-height: 1.7;
+            color: var(--text);
+            background: var(--bg);
+        }
+
+        /* ---------- Header ---------- */
+        header {
+            background:
+                radial-gradient(circle at 85% 20%, rgba(244, 185, 66, .18), transparent 40%),
+                linear-gradient(135deg, var(--navy) 0%, #124e66 55%, var(--teal) 100%);
+            color: #fff;
+            text-align: center;
+            padding: 3rem 1.2rem 2rem;
+            border-bottom: 5px solid var(--amber);
+        }
+        header h1 {
+            margin: 0 0 .3rem;
+            font-size: clamp(1.9rem, 5vw, 2.8rem);
+            letter-spacing: .5px;
+        }
+        header p { margin: 0; }
+        header p em {
+            font-style: normal;
+            color: #cfeceb;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+        }
+        figure { margin: 1.6rem auto 1.2rem; }
+        figure img {
+            width: 170px;
+            height: 170px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid #fff;
+            box-shadow: 0 8px 28px rgba(0, 0, 0, .35);
+            background: #cfeceb;
+            color: transparent;
+        }
+        figcaption {
+            margin-top: .6rem;
+            font-size: .85rem;
+            color: #bfe0df;
+        }
+
+        /* ---------- Navigation (pills) ---------- */
+        nav {
+            font-size: 0;               /* hides the "|" separators */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: .5rem;
+            margin-top: 1rem;
+        }
+        nav a {
+            font-size: .92rem;
+            color: #fff;
+            text-decoration: none;
+            padding: .45rem 1.1rem;
+            border: 1px solid rgba(255, 255, 255, .35);
+            border-radius: 999px;
+            background: rgba(255, 255, 255, .08);
+            transition: background .2s, color .2s, transform .2s;
+        }
+        nav a:hover, nav a:focus-visible {
+            background: var(--amber);
+            border-color: var(--amber);
+            color: var(--navy);
+            transform: translateY(-2px);
+        }
+
+        /* decorative <hr> lines are replaced by card spacing */
+        hr { display: none; }
+
+        /* ---------- Main cards ---------- */
+        main {
+            max-width: 920px;
+            margin: -1.2rem auto 2rem;
+            padding: 0 1rem;
+        }
+        main > section {
+            background: var(--card);
+            border-radius: 16px;
+            padding: 1.8rem 2rem;
+            margin-top: 1.5rem;
+            box-shadow: var(--shadow);
+            border-top: 4px solid var(--teal);
+            scroll-margin-top: 1rem;
+        }
+
+        h2 {
+            margin: 0 0 1rem;
+            font-size: 1.55rem;
+            color: var(--navy);
+            display: flex;
+            align-items: center;
+            gap: .6rem;
+        }
+        h2::after {
+            content: "";
+            flex: 1;
+            height: 2px;
+            background: linear-gradient(90deg, var(--teal), transparent);
+        }
+        h3 {
+            margin: 1.4rem 0 .3rem;
+            font-size: 1.15rem;
+            color: var(--teal-dark);
+        }
+        h4 {
+            margin: 1.4rem 0 .4rem;
+            font-size: 1rem;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+        @media (prefers-color-scheme: dark) { h2 { color: #e8f3f8; } }
+
+        p { margin: .5rem 0 .8rem; }
+        strong { color: var(--navy); }
+        @media (prefers-color-scheme: dark) { strong { color: #fff; } }
+        em { color: var(--teal-dark); }
+        sup { color: var(--teal); font-weight: 600; }
+
+        mark {
+            background: linear-gradient(transparent 55%, rgba(244, 185, 66, .65) 55%);
+            color: inherit;
+            padding: 0 .2rem;
+            font-weight: 600;
+        }
+        del { color: #c0392b; }
+        ins { color: #1e8449; text-decoration: none; font-weight: 700; }
+
+        small { color: var(--muted); }
+
+        /* ---------- Links ---------- */
+        main a {
+            color: var(--teal-dark);
+            font-weight: 600;
+            text-decoration: none;
+            border-bottom: 2px solid rgba(14, 124, 123, .3);
+            transition: border-color .2s, color .2s;
+        }
+        main a:hover { color: var(--teal); border-bottom-color: var(--amber); }
+        @media (prefers-color-scheme: dark) { main a { color: var(--teal); } }
+
+        a[href="#"] {
+            display: inline-block;
+            margin-top: .6rem;
+            padding: .5rem 1.2rem;
+            background: var(--teal);
+            color: #fff !important;
+            border-radius: 8px;
+            border: none !important;
+        }
+        a[href="#"]:hover { background: var(--navy); }
+
+        /* ---------- Lists ---------- */
+        ul, ol { padding-left: 1.4rem; margin: .4rem 0 .8rem; }
+        li { margin: .25rem 0; }
+        li::marker { color: var(--teal); }
+
+        /* Skills as chips */
+        #skills ul ul,
+        #skills ul:not(:has(ul)) {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: .5rem;
+            margin: .5rem 0 .9rem;
+        }
+        #skills ul ul li,
+        #skills ul:not(:has(ul)) li {
+            margin: 0;
+            padding: .3rem .95rem;
+            background: var(--soft);
+            color: var(--teal-dark);
+            border: 1px solid var(--line);
+            border-radius: 999px;
+            font-size: .92rem;
+            font-weight: 600;
+        }
+        @media (prefers-color-scheme: dark) {
+            #skills ul ul li, #skills ul:not(:has(ul)) li { color: #bfe9e7; }
+        }
+        #skills > ul:first-of-type { padding-left: 0; list-style: none; }
+        #skills > ul:first-of-type > li { font-weight: 700; color: var(--navy); }
+        @media (prefers-color-scheme: dark) { #skills > ul:first-of-type > li { color: #fff; } }
+
+        /* Education courses */
+        ol { counter-reset: course; list-style: none; padding-left: 0; }
+        ol li {
+            counter-increment: course;
+            padding: .45rem .9rem .45rem 2.8rem;
+            position: relative;
+            background: var(--soft);
+            border-radius: 8px;
+            margin: .35rem 0;
+        }
+        ol li::before {
+            content: counter(course);
+            position: absolute;
+            left: .7rem;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 1.5rem;
+            height: 1.5rem;
+            line-height: 1.5rem;
+            text-align: center;
+            font-size: .8rem;
+            font-weight: 700;
+            color: #fff;
+            background: var(--teal);
+            border-radius: 50%;
+        }
+
+        /* Glossary */
+        dl { margin: .5rem 0; }
+        dt {
+            font-weight: 700;
+            color: var(--teal-dark);
+            margin-top: .8rem;
+        }
+        dd {
+            margin: .1rem 0 0 0;
+            padding: .3rem .9rem;
+            border-left: 3px solid var(--amber);
+            background: var(--soft);
+            border-radius: 0 8px 8px 0;
+        }
+
+        /* ---------- Tables ---------- */
+        table {
+            width: 100%;
+            border: 0;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin: .6rem 0 1rem;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 0 0 1px var(--line);
+            font-size: .96rem;
+        }
+        caption {
+            caption-side: top;
+            text-align: left;
+            font-weight: 700;
+            color: var(--teal-dark);
+            padding: 0 0 .5rem;
+            letter-spacing: .5px;
+        }
+        th, td {
+            border: 0;
+            border-bottom: 1px solid var(--line);
+            border-right: 1px solid var(--line);
+            padding: .75rem 1rem;
+            text-align: left;
+        }
+        th:last-child, td:last-child { border-right: 0; }
+        tr:last-child > th, tr:last-child > td { border-bottom: 0; }
+
+        thead th {
+            background: linear-gradient(135deg, var(--navy), var(--teal-dark));
+            color: #fff;
+            font-weight: 600;
+            letter-spacing: .5px;
+            border-right-color: rgba(255, 255, 255, .15);
+        }
+        tbody tr:nth-child(even) > td { background: var(--soft); }
+        tbody tr:hover > td { background: rgba(244, 185, 66, .18); }
+        tfoot td {
+            background: var(--soft);
+            font-weight: 700;
+            color: var(--navy);
+            border-top: 2px solid var(--teal);
+        }
+        @media (prefers-color-scheme: dark) { tfoot td { color: #fff; } }
+
+        /* schedule table: centred cells */
+        #schedule td, #schedule th { text-align: center; }
+        #schedule tbody td:first-child {
+            font-weight: 700;
+            background: var(--soft);
+            color: var(--teal-dark);
+            width: 90px;
+        }
+        #schedule td[colspan], #schedule td[rowspan] {
+            background: rgba(14, 124, 123, .12);
+            font-weight: 600;
+        }
+
+        /* contact table: label column */
+        #contact tbody th {
+            width: 150px;
+            background: var(--soft);
+            color: var(--teal-dark);
+            border-right: 1px solid var(--line);
+        }
+
+        /* ---------- Footer ---------- */
+        footer {
+            text-align: center;
+            padding: 1.6rem 1rem 2.2rem;
+            background: var(--navy);
+            color: #b8c7d3;
+            border-top: 4px solid var(--amber);
+        }
+        footer p { margin: 0; }
+        footer small { color: #b8c7d3; }
+
+        /* ---------- Responsive ---------- */
+        @media (max-width: 640px) {
+            main > section { padding: 1.3rem 1.1rem; }
+            th, td { padding: .6rem .6rem; font-size: .88rem; }
+            #contact tbody th { width: 95px; }
+            table { display: block; overflow-x: auto; }
+        }
+
+        /* ---------- Print ---------- */
+        @media print {
+            body { background: #fff; }
+            nav, a[href="#"] { display: none; }
+            main > section { box-shadow: none; break-inside: avoid; }
+            header { padding: 1rem; }
+        }
+    </style>
+
+</head>
+<body>
+
+    <!-- ===== Header ===== -->
+    <header>
+        <h1>Abdalrohman mohmad Altos</h1>
+        <p><em>Intelligent systems and computer engineering student</em></p>
+
+        <figure>
+            <img src="D:\دبلومة فرونت اند\image\Abood.png" alt="Portrait ofAbdalrohman mohmad Altos" width="200" height="200">
+            <figcaption>Figure 1: Abdalrohman mohmad Altos</figcaption>
+        </figure>
+
+        <nav>
+            <a href="#about">About Me</a> |
+            <a href="#education">Education</a> |
+            <a href="#skills">Skills</a> |
+            <a href="#experience">Experience</a> |
+            <a href="#projects">Projects</a> |
+            <a href="#schedule">Schedule</a> |
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <hr>
+
+    <main>
+
+        <!-- ===== About ===== -->
+        <section id="about">
+            <h2>About Me</h2>
+            <p>
+                I am a <strong>motivated</strong> third-year Computer Science student who loves
+                building websites and solving problems. I am currently learning
+                <mark>HTML, CSS and JavaScript</mark> and I am looking for a
+                <em>summer internship</em> in web development.
+            </p>
+            <p>
+                Languages: Arabic (native), English (good)<br>
+                Location: Palestine<br>
+                Availability: Full-time during summer
+            </p>
+        </section>
+
+        <hr>
+
+        <!-- ===== Education ===== -->
+        <section id="education">
+            <h2>Education</h2>
+
+            <h3>B.Sc. in Computer Science</h3>
+            <p>
+                <strong>Al-Aqsa University</strong>, Palestine<br>
+                2023 - 2027 (expected)<br>
+                GPA: 85<sup>%</sup>
+            </p>
+
+            <h3>High School Diploma (Scientific Stream)</h3>
+            <p>
+                <strong>Harun al-Rashid School</strong><br>
+                2020 - 2023<br>
+                Average: 83.9<sup>%</sup>
+            </p>
+
+            <h4>Relevant Courses</h4>
+            <ol>
+                <li>Introduction to Programming</li>
+                <li>Web Development 1</li>
+                <li>Database Systems</li>
+                <li>Data Structures</li>
+            </ol>
+        </section>
+
+        <hr>
+
+        <!-- ===== Skills ===== -->
+        <section id="skills">
+            <h2>Skills</h2>
+
+            <h3>Technical Skills</h3>
+            <ul>
+                <li>Web Technologies
+                    <ul>
+                        <li>HTML5</li>
+                        <li>CSS3 (learning)</li>
+                        <li>JavaScript (learning)</li>
+                    </ul>
+                </li>
+                <li>Programming Languages
+                    <ul>
+                        <li>Python</li>
+                        <li>Java</li>
+                        <li>C++</li>
+                    </ul>
+                </li>
+                <li>Tools
+                    <ul>
+                        <li>VS Code</li>
+                        <li>Git &amp; GitHub</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3>Soft Skills</h3>
+            <ul>
+                <li>Teamwork</li>
+                <li>Problem solving</li>
+                <li>Time management</li>
+                <li>Fast learning</li>
+            </ul>
+
+            <h3>Glossary of Terms I Use</h3>
+            <dl>
+                <dt>HTML</dt>
+                <dd>HyperText Markup Language - the structure of web pages.</dd>
+
+                <dt>CSS</dt>
+                <dd>Cascading Style Sheets - the visual presentation of web pages.</dd>
+
+                <dt>JavaScript</dt>
+                <dd>A programming language for adding interactivity to web pages.</dd>
+            </dl>
+        </section>
+
+        <hr>
+
+        <!-- ===== Experience ===== -->
+        <section id="experience">
+            <h2>Experience</h2>
+
+
+
+            <h3>Freelance Web Designer</h3>
+            <p>
+                <strong>Self-employed</strong> | 2025
+            </p>
+            <ul>
+                <li>Created a small website for a local shop.</li>
+                <li>Price: <del>$100</del> <ins>$70</ins> (student discount).</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <!-- ===== Projects ===== -->
+        <section id="projects">
+            <h2>Projects</h2>
+
+            <table border="1" cellpadding="6" cellspacing="0">
+                <caption>My Projects</caption>
+                <thead>
+                    <tr>
+                        <th>Project</th>
+                        <th>Description</th>
+                        <th>Technology</th>
+                        <th>Year</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Personal CV</td>
+                        <td>A CV page built with HTML only</td>
+                        <td>HTML5</td>
+                        <td>2026</td>
+                    </tr>
+                    <tr>
+                        <td>Student Manager</td>
+                        <td>Console app to manage student records</td>
+                        <td>Java</td>
+                        <td>2025</td>
+                    </tr>
+                    <tr>
+                        <td>Library System</td>
+                        <td>Database design for a university library</td>
+                        <td>MySQL</td>
+                        <td>2025</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3">Total projects</td>
+                        <td>3</td>
+                    </tr>
+                </tfoot>
+            </table>
+
+            <p>
+                See my code on
+                <a href="https://github.com/a0599561323-del" target="_blank" rel="noopener noreferrer">GitHub</a>.
+            </p>
+        </section>
+
+        <hr>
+
+        <!-- ===== Weekly Schedule (colspan + rowspan) ===== -->
+        <section id="schedule">
+            <h2>Weekly Study Schedule</h2>
+
+            <table border="1" cellpadding="6" cellspacing="0">
+                <caption>Weekly Schedule</caption>
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Monday</th>
+                        <th>Tuesday</th>
+                        <th>Wednesday</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>9:00</td>
+                        <td colspan="2">Web Development Lab</td>
+                        <td rowspan="2">Project Work</td>
+                    </tr>
+                    <tr>
+                        <td>10:00</td>
+                        <td>HTML Lecture</td>
+                        <td>Database Lecture</td>
+                    </tr>
+                    <tr>
+                        <td>11:00</td>
+                        <td colspan="3">Free Period</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <hr>
+
+        <!-- ===== Contact ===== -->
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <table border="1" cellpadding="6" cellspacing="0">
+                <tbody>
+                    <tr>
+                        <th>Email</th>
+                        <td><a href="mailto:a0599561323@gmail.com">a0599561323@gmail.com</a></td>
+                    </tr>
+                    <tr>
+                        <th>Phone</th>
+                        <td><a href="tel:+970597171069">+970-597-171-069</a></td>
+                    </tr>
+                    <tr>
+                        <th>Instagram</th>
+                        <td>
+                            <a href="https://www.instagram.com/abood_al_tous?obrf=c3J5NnhuYnU3czc5" target="_blank" rel="noopener noreferrer">My Instagram Profile</a>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+            <p><a href="#">Back to Top</a></p>
+        </section>
+
+    </main>
+
+    <hr>
+
+    <footer>
+        <p><small>&copy; 2026 Abdalrohman mohmad Altos. All rights reserved.</small></p>
+    </footer>
+
+</body>
+</html>
